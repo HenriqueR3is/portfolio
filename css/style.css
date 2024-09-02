@@ -198,52 +198,101 @@ main {
   max-width: 140vh;
 }
 
-.skills {
-  text-decoration: none;
-}
-
-.skills h3,
-.skills h4 {
-  margin-top: 30px;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.skills ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-  text-align: center;
-}
-
-.direitos {
+.direitos h3 {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 2px;
   margin-bottom: 8px;
+  position: relative;
+  width: 100%;
+  bottom: -22px;
 }
 
-/* #home {
-  height: 100vh;
-  overflow: hidden;
+/* Sobre Mim */
+.skills {
+  padding: 40px;
+  background-color: #101057;
+  color: #f0e6d2;
+  text-align: center; /* Certifica que o texto está centralizado */
 }
 
-#sobre-mim {
-  display: none;
+.skills h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.scrollable {
-  overflow: auto;
-  height: auto;
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
+.skills-esq,
+.skills-dir {
+  flex: 1;
+  max-width: 45%;
 }
 
-body.scrollable {
-  overflow-y: scroll;
-} */
+.skills-esq h4,
+.skills-dir h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.skills-esq p,
+.skills-dir p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.skills-esq ul,
+.skills-dir ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.skills-esq li,
+.skills-dir li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-esq,
+  .skills-dir {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .skills-esq ul,
+  .skills-dir ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-esq,
+  .skills-dir {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .skills-esq ul,
+  .skills-dir ul {
+    text-align: center;
+  }
+}
